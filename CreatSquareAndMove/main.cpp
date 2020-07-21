@@ -83,12 +83,17 @@ void RenderScene(void){
     //平面着色器(固定着色器)
     shaderManager.UseStockShader(GLT_SHADER_FLAT, mTransfromMatrix, vRed);
     
+
+    
+    
     //提交着色器
     triangleBatch.Draw();
     
     //在开始的设置openGL 窗口的时候，我们指定要一个双缓冲区的渲染环境。这就意味着将在后台缓冲区进行渲染，渲染结束后交换给前台。这种方式可以防止观察者看到可能伴随着动画帧与动画帧之间的闪烁的渲染过程。缓冲区交换平台将以平台特定的方式进行。
     //将后台缓冲区进行渲染，然后结束后交换给前台
     glutSwapBuffers();
+    
+    
 }
 
 /*
